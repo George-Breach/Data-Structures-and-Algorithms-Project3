@@ -50,17 +50,8 @@ public class DoubleEndedList<T> implements DoubleEndedListInterface<T> {
 		return currentNode;
 	}
 	
-	
-	/*
-	 * 
-	 * 
-	 * 
-	 * 
-	 * 
-	 * 
-	 */
-	
 	// code needed to make list interface methods work
+	// this code was pulled from previous labs we had
 	public void add(T newEntry) {
         Node newNode = new Node(newEntry);
         if (isEmpty()) {
@@ -188,7 +179,14 @@ public class DoubleEndedList<T> implements DoubleEndedListInterface<T> {
         return result;
     } // end isEmpty
 
-
+    //************************************************************************//
+    //************************************************************************//
+    //************************************************************************//
+    //************************************************************************//
+    //************************************************************************//
+    
+    // methods needed for double ended list interface
+    
 	@Override
 	public void addFirst(T newEntry) {
 		// TODO Auto-generated method stub
@@ -265,7 +263,6 @@ public class DoubleEndedList<T> implements DoubleEndedListInterface<T> {
 	@Override
 	public void moveToEnd() {
 		// TODO Auto-generated method stub
-		
 		if (firstNode.getNextNode() != null) {
 			Node endNode = firstNode;
 			firstNode = firstNode.getNextNode();
@@ -275,10 +272,7 @@ public class DoubleEndedList<T> implements DoubleEndedListInterface<T> {
 				temp = temp.next;
 			}
 			temp.next = endNode;
-		}
-		
+		}	
 	}
-    
-
 
 }
